@@ -31,7 +31,7 @@ public class SalaAulaJdbcTemplateTest {
 
         // Salva uma sala
         out.println("\nTestando: salvando uma sala");
-        SalaAula novaSalaAula = new SalaAula(2, 2, 2);
+        SalaAula novaSalaAula = new SalaAula(3, 3, 3);
         salaAulaRepository.salvar(novaSalaAula);
         listaSalas(salaAulaRepository);
 
@@ -46,7 +46,7 @@ public class SalaAulaJdbcTemplateTest {
         // Exclui uma sala
         out.println("\nTestando: excluindo uma sala");
         salaAulaRepository.excluir(novaSalaAula.getIdSalaAula());
-        out.printf("IdSalaAula: %s%n", novaSalaAula.getIdSalaAula());
+        out.printf("IdSalaAula: %d%n", novaSalaAula.getIdSalaAula());
         listaSalas(salaAulaRepository);
     }
 

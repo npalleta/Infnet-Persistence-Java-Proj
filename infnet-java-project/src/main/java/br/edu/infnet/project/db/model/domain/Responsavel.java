@@ -11,7 +11,7 @@ public class Responsavel {
     @Column(name = "idResponsavel")
     private Integer idResponsavel;
 
-    @OneToOne(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @OneToOne(optional = false, fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinTable(
         name = "Aluno",
         joinColumns = {@JoinColumn(name = "IdAluno", insertable = false, updatable = false)}

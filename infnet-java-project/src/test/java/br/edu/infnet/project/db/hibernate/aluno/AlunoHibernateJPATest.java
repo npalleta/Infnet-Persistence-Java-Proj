@@ -12,7 +12,7 @@ public class AlunoHibernateJPATest {
     public static void testeAluno(AlunoService alunoService) {
         out.printf("Início do teste - %s%n%n", alunoService.getClass());
         listaAlunos("Estado inicial", alunoService);
-        buscaAlunosPorId(1, alunoService);
+        buscaAlunoPorId(1, alunoService);
 
         // Cria um novo aluno
         Aluno aluno = new Aluno();
@@ -53,8 +53,8 @@ public class AlunoHibernateJPATest {
         );
     }
 
-    private static void buscaAlunosPorId(int idAluno, AlunoService alunoService) {
-        out.printf("Buscando o id de aluno número: %s%n", idAluno);
+    private static void buscaAlunoPorId(int idAluno, AlunoService alunoService) {
+        out.printf("Buscando o id de aluno número: %d%n", idAluno);
         Aluno aluno = alunoService.buscarPorId(idAluno);
         out.printf(
             "IdAluno: %s, Nome do Aluno: %s, Número de Matrícula: %d, Número da Sala: %d, Ativo: %b%n",

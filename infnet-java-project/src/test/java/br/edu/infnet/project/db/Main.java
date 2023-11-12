@@ -4,8 +4,10 @@ import br.edu.infnet.project.db.hibernate.aluno.AlunoHibernateJPATest;
 import br.edu.infnet.project.db.hibernate.aluno.AlunoJdbcTemplateTest;
 import br.edu.infnet.project.db.hibernate.aluno.AlunoJdbcTest;
 import br.edu.infnet.project.db.hibernate.aluno.AlunoJpqlTest;
+import br.edu.infnet.project.db.hibernate.sala.aula.SalaAulaHibernateJPATest;
 import br.edu.infnet.project.db.hibernate.sala.aula.SalaAulaJdbcTemplateTest;
 import br.edu.infnet.project.db.service.AlunoService;
+import br.edu.infnet.project.db.service.SalaAulaService;
 
 import java.sql.SQLException;
 
@@ -19,6 +21,9 @@ public class Main {
     }
 
     public static void testaSalaAula() {
+        SalaAulaService salaAulaService = new SalaAulaService();
+        SalaAulaHibernateJPATest.testeSalaAula(salaAulaService);
+        //
         try {
             SalaAulaJdbcTemplateTest.testeSalaAula();
         } catch (SQLException e) {

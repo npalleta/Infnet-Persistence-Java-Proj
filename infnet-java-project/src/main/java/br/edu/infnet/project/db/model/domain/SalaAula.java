@@ -11,10 +11,10 @@ public class SalaAula {
     @Column(name = "IdSalaAula")
     private Integer idSalaAula;
 
-    @Column(name = "IdAluno", nullable = false, insertable=false, updatable=false)
+    @Column(name = "IdAluno")
     private Integer idAluno;
 
-    @Column(name = "IdProfessor", nullable = false, insertable=false, updatable=false)
+    @Column(name = "IdProfessor")
     private Integer idProfessor;
 
     public SalaAula() {

@@ -3,7 +3,7 @@
         "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class name="br.edu.infnet.project.db.model.domain.SalaAula" table="SalaAula">
-        <id name="IdSalaAula" type="integer">
+        <id name="idSalaAula" type="integer">
             <column name="IdSalaAula"/>
             <generator class="identity"/>
         </id>

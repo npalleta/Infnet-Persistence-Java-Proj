@@ -2,14 +2,13 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
         "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-    <class name="br.edu.infnet.project.db.model.domain.Aluno" table="Aluno">
-        <id name="idAluno" type="integer">
-            <column name="IdAluno"/>
+    <class name="br.edu.infnet.project.db.model.domain.Responsavel" table="Responsavel">
+        <id name="idResponsavel" type="integer">
+            <column name="IdResponsavel"/>
             <generator class="identity"/>
         </id>
-        <property name="nomeAluno" column="NomeAluno" type="string"/>
-        <property name="numMatricula" column="NumMatricula" type="integer"/>
-        <property name="numSalaAula" column="NumSalaAula" type="integer"/>
-        <property name="ativo" column="Ativo" type="boolean"/>
+        <property name="nomeResponsavel" column="NomeResponsavel" type="string"/>
+        <one-to-one name="aluno" class="br.edu.infnet.project.db.model.domain.Responsavel" cascade="save-update" lazy="false"/>
+        <property name="parentesco" column="NumSalaAula" type="string"/>
     </class>
 </hibernate-mapping>
