@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="br.edu.infnet.project.db.model.domain.Aluno" table="Aluno">
+        <id name="idAluno" type="integer">
+            <column name="IdAluno"/>
+            <generator class="identity"/>
+        </id>
+        <property name="nomeAluno" column="NomeAluno" type="string"/>
+        <property name="numMatricula" column="NumMatricula" type="integer"/>
+        <property name="numSalaAula" column="NumSalaAula" type="integer"/>
+        <property name="ativo" column="Ativo" type="boolean"/>
+    </class>
+</hibernate-mapping>

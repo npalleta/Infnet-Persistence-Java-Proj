@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/infnet_project</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">root1234</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <!--Configuração para mostrar as instruções SQL-->
+        <property name="show_sql">true</property>
+        <mapping class="br.edu.infnet.project.db.model.domain.Aluno"/>
+        <!--mapping resource="Aluno.hbm.xml"/-->
+        <mapping class="br.edu.infnet.project.db.model.domain.Professor"/>
+        <!--mapping resource="Professor.hbm.xml"/-->
+        <mapping class="br.edu.infnet.project.db.model.domain.Responsavel"/>
+        <!--mapping resource="Responsavel.hbm.xml"/-->
+        <mapping class="br.edu.infnet.project.db.model.domain.SalaAula"/>
+        <!--mapping resource="SalaAula.hbm.xml"/-->
+    </session-factory>
+</hibernate-configuration>

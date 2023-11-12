@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="br.edu.infnet.project.db.model.domain.Professor" table="Professor">
+        <id name="idProfessor" type="integer">
+            <column name="IdProfessor"/>
+            <generator class="identity"/>
+        </id>
+        <property name="nomeProfessor" column="NomeProfessor" type="string"/>
+        <!-- set name="alunos" table="Aluno" inverse="false" lazy="true" fetch="select" cascade="all">
+            <key>
+                <column name="IdAluno" not-null="true"/>
+            </key>
+            <many-to-many entity-name="br.edu.infnet.project.db.model.domain.Professor">
+                <column name="IdAluno" not-null="true"/>
+            </many-to-many>
+        </set -->
+        <property name="numSalaAula" column="NumSalaAula" type="integer"/>
+        <property name="materia" column="Materia" type="string"/>
+    </class>
+</hibernate-mapping>
