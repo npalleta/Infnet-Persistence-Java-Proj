@@ -14,4 +14,4 @@ Antes de começar, verifique se você atendeu aos seguintes requisitos:
 
 Faça o clone do repositório e:
 
-1. Na pasta **docker**, execute o comando *docker compose up -d* para subir o banco;
+1. Na pasta **docker**, encontrada na raiz do projeto, execute o comando *docker compose up -d* para subir o banco;
