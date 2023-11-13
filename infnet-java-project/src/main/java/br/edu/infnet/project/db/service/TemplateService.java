@@ -4,7 +4,7 @@ import java.util.List;
 
 public abstract class TemplateService<T> {
 
-    public abstract List<?>  buscarTodas();
+    public abstract List<?> buscarTodos();
 
     public abstract T buscarPorId(int id);
 

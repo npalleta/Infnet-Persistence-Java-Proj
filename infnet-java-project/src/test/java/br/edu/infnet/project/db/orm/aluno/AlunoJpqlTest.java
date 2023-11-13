@@ -16,7 +16,8 @@ public class AlunoJpqlTest {
     public static void testeAluno() {
         EntityManagerFactory emfactory = Persistence.createEntityManagerFactory( "infnet_project" );
         em = emfactory.createEntityManager();
-        listaAlunosProfessor();
+        todosAlunos();
+        listaProfessores();
     }
 
     private static void todosAlunos() {
@@ -34,8 +35,8 @@ public class AlunoJpqlTest {
         );
     }
 
-    private static void listaAlunosProfessor() {
-        out.println("\nTestando: lista todos os alunos dos professores cadastrados");
+    private static void listaProfessores() {
+        out.println("\nTestando: lista todos os professores cadastrados");
         List<Professor> professorList = em.createQuery("SELECT object(p) FROM Professor p").getResultList();
         professorList.forEach(professor ->
             out.printf(

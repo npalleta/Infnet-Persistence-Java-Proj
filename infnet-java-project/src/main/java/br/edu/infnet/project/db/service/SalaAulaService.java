@@ -18,7 +18,7 @@ public class SalaAulaService extends TemplateService {
     }
 
     @Override
-    public List<SalaAula> buscarTodas() {
+    public List<SalaAula> buscarTodos() {
         Session sessao = sessionFactory.openSession();
         List<SalaAula> salas = sessao.createQuery("FROM SalaAula", SalaAula.class).list();
         sessao.close();

@@ -1,6 +1,5 @@
 package br.edu.infnet.project.db.repository;
 
-import br.edu.infnet.project.db.model.domain.Aluno;
 import br.edu.infnet.project.db.model.domain.SalaAula;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;

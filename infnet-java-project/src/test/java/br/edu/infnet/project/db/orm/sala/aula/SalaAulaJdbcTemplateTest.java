@@ -21,7 +21,7 @@ public class SalaAulaJdbcTemplateTest {
         jdbcTemplate = new JdbcTemplate();
         SalaAulaRepository salaAulaRepository = context.getBean(SalaAulaRepository.class);
 
-        // Lista todos as salas
+        // Lista todas as salas
         listaSalas(salaAulaRepository);
 
         // Busca uma sala por ID
@@ -51,7 +51,7 @@ public class SalaAulaJdbcTemplateTest {
     }
 
     private static void listaSalas(SalaAulaRepository salaAulaRepository) throws SQLException {
-        out.println("\nTestando: todas as sala");
+        out.println("\nTestando: todas as salas");
         salaAulaRepository.listarTodos().forEach(out::println);
     }
 }

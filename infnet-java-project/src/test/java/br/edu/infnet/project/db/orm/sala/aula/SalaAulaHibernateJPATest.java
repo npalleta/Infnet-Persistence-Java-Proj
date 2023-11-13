@@ -41,7 +41,7 @@ public class SalaAulaHibernateJPATest {
     private static void listaSalas(String mensagem, SalaAulaService salaAulaService) {
         out.println(mensagem);
         // Lista todas as salas
-        List<SalaAula> salas = salaAulaService.buscarTodas();
+        List<SalaAula> salas = salaAulaService.buscarTodos();
         salas.forEach(salaAula ->
             out.printf(
                 "IdSalaAula: %d, IdAluno: %d, IdProfessor: %d%n",

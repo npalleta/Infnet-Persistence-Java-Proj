@@ -26,7 +26,7 @@ public class ProfessorJdbcTemplateTest {
 
         // Busca um professor por ID
         out.println("\nTestando: buscando um professor");
-        Professor Professor = ProfessorRepository.buscarPorId(2);
+        Professor Professor = ProfessorRepository.buscarPorId(1);
         out.println(Professor);
 
         // Salva um professor
@@ -44,7 +44,7 @@ public class ProfessorJdbcTemplateTest {
         ProfessorRepository.atualizar(novaProfessor);
         listaSalas(ProfessorRepository);
 
-        // Exclusão de professor
+        // Exclusão de um professor
         out.println("\nTestando: excluindo um professor");
         ProfessorRepository.excluir(novaProfessor.getIdProfessor());
         out.printf("IdProfessor: %d%n", novaProfessor.getIdProfessor());

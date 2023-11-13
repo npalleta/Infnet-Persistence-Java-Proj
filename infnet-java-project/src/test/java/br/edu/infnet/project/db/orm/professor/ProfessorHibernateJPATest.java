@@ -25,7 +25,7 @@ public class ProfessorHibernateJPATest {
         listaProfessores("Novo professor", professorService);
 
         // Atualiza um professor
-        professor.setIdProfessor(1);
+        // professor.setIdProfessor(2);
         professor.setNomeProfessor("Leo Fender");
         professor.setNumSalaAula(1);
         professor.setMateria("Educação Física");
@@ -42,7 +42,7 @@ public class ProfessorHibernateJPATest {
     private static void listaProfessores(String mensagem, ProfessorService professorService) {
         out.println(mensagem);
         // Lista todos os professores
-        List<Professor> professores = professorService.buscarTodas();
+        List<Professor> professores = professorService.buscarTodos();
         professores.forEach(professor ->
             out.printf(
                 "IdProfessor: %d, NomeProfessor: %s, NumSalaAula: %d, Materia: %s%n",

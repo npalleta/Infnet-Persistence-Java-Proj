@@ -1,56 +1,56 @@
 package br.edu.infnet.project.db.service;
 
-import br.edu.infnet.project.db.model.domain.Aluno;
+import br.edu.infnet.project.db.model.domain.Responsavel;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
 import java.util.List;
 
-public class AlunoService extends TemplateService {
+public class ResponsavelService extends TemplateService {
 
     private final SessionFactory sessionFactory;
 
-    public AlunoService() {
+    public ResponsavelService() {
         Configuration config = new Configuration();
         config.configure("hibernate.cfg.xml");
         this.sessionFactory = config.buildSessionFactory();
     }
 
     @Override
-    public List<Aluno> buscarTodos() {
+    public List<Responsavel> buscarTodos() {
         Session sessao = sessionFactory.openSession();
-        List<Aluno> alunos = sessao.createQuery("FROM Aluno", Aluno.class).list();
+        List<Responsavel> responsaveis = sessao.createQuery("SELECT r FROM Responsavel r INNER JOIN r.aluno a ON r.aluno.idAluno = a.idAluno", Responsavel.class).list();
         sessao.close();
-        return alunos;
+        return responsaveis;
     }
 
     @Override
-    public Aluno buscarPorId(int idAluno) {
+    public Responsavel buscarPorId(int idResponsavel) {
         Session session = sessionFactory.openSession();
-        Aluno aluno = session.get(Aluno.class, idAluno);
+        Responsavel responsavel = session.get(Responsavel.class, idResponsavel);
         session.close();
-        return aluno;
+        return responsavel;
     }
 
     @Override
-    public Aluno salvar(Object entity) {
+    public Responsavel salvar(Object entity) {
         Session sessao = sessionFactory.openSession();
         sessao.beginTransaction();
         sessao.persist(entity);
         sessao.getTransaction().commit();
         sessao.close();
-        return (Aluno) entity;
+        return (Responsavel) entity;
     }
 
     @Override
-    public Aluno atualizar(Object entity) {
+    public Responsavel atualizar(Object entity) {
         Session sessao = sessionFactory.openSession();
         sessao.beginTransaction();
         sessao.merge(entity);
         sessao.getTransaction().commit();
         sessao.close();
-        return (Aluno) entity;
+        return (Responsavel) entity;
     }
 
     @Override

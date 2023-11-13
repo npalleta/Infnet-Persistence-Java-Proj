@@ -18,7 +18,7 @@ public class ProfessorService extends TemplateService {
     }
 
     @Override
-    public List<Professor> buscarTodas() {
+    public List<Professor> buscarTodos() {
         Session sessao = sessionFactory.openSession();
         List<Professor> Professors = sessao.createQuery("FROM Professor", Professor.class).list();
         sessao.close();

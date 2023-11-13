@@ -39,8 +39,8 @@ public class AlunoHibernateJPATest {
 
     private static void listaAlunos(String mensagem, AlunoService alunoService) {
         out.println(mensagem);
-        // Lista todas os alunos
-        List<Aluno> alunos = alunoService.buscarTodas();
+        // Lista todos os alunos
+        List<Aluno> alunos = alunoService.buscarTodos();
         alunos.forEach(aluno ->
             out.printf(
                 "IdAluno: %s, Nome do Aluno: %s, Número de Matrícula: %d, Número da Sala: %d, Ativo: %b%n",

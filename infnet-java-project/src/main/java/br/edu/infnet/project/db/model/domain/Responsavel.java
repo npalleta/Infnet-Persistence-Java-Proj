@@ -11,12 +11,16 @@ public class Responsavel {
     @Column(name = "idResponsavel")
     private Integer idResponsavel;
 
-    @OneToOne(optional = false, fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @OneToOne(optional = false)
     @JoinTable(
         name = "Aluno",
-        joinColumns = {@JoinColumn(name = "IdAluno", insertable = false, updatable = false)}
+        joinColumns = {@JoinColumn(name = "IdAluno", insertable = false, updatable = false)},
+        inverseJoinColumns = {@JoinColumn(name = "IdAluno", insertable = false, updatable = false)}
     )
     private Aluno aluno;
+
+    @Column(name = "IdAluno")
+    private Integer idAluno;
 
     @Column(name = "NomeResponsavel", nullable = false)
     private String nomeResponsavel;
@@ -38,6 +42,19 @@ public class Responsavel {
         this.parentesco = parentesco;
     }
 
+    public Responsavel(Integer idResponsavel, String nomeResponsavel, String parentesco) {
+        this.idResponsavel = idResponsavel;
+        this.nomeResponsavel = nomeResponsavel;
+        this.parentesco = parentesco;
+    }
+
+    public Responsavel(Integer idResponsavel, Aluno aluno, String nomeResponsavel, String parentesco) {
+        this.idResponsavel = idResponsavel;
+        this.aluno = aluno;
+        this.nomeResponsavel = nomeResponsavel;
+        this.parentesco = parentesco;
+    }
+
     public Integer getIdResponsavel() {
         return this.idResponsavel;
     }
@@ -52,6 +69,14 @@ public class Responsavel {
 
     public void setAluno(Aluno aluno) {
         this.aluno = aluno;
+    }
+
+    public Integer getIdAluno() {
+        return this.idAluno;
+    }
+
+    public void setIdAluno(Integer idAluno) {
+        this.idAluno = idAluno;
     }
 
     public String getNomeResponsavel() {
@@ -75,6 +100,7 @@ public class Responsavel {
         return "Responsavel{" +
             "idResponsavel=" + idResponsavel +
             ", aluno=" + aluno +
+            ", idAluno=" + idAluno +
             ", nomeResponsavel='" + nomeResponsavel + '\'' +
             ", parentesco='" + parentesco + '\'' +
             '}';
