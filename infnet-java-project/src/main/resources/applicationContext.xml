@@ -26,7 +26,7 @@
         <constructor-arg ref="jdbcTemplate"/>
     </bean>
 
-    <!-- Configuração do seu repositório de Responsavel -->
+    <!-- Configuração do seu repositório de Responsável -->
     <bean id="responsavelService" class="br.edu.infnet.project.db.repository.ResponsavelRepository">
         <constructor-arg ref="jdbcTemplate"/>
     </bean>
