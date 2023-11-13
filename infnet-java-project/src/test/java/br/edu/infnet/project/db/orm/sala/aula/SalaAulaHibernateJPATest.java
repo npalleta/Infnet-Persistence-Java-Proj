@@ -1,4 +1,4 @@
-package br.edu.infnet.project.db.hibernate.sala.aula;
+package br.edu.infnet.project.db.orm.sala.aula;
 
 import br.edu.infnet.project.db.model.domain.SalaAula;
 import br.edu.infnet.project.db.service.SalaAulaService;

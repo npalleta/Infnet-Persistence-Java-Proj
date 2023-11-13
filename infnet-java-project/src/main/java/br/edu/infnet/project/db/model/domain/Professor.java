@@ -10,7 +10,7 @@ public class Professor {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "IdProfessor")
+    @Column(name = "IdProfessor", insertable = false, updatable = false)
     private Integer idProfessor;
 
     @OneToMany(mappedBy = "professores")
@@ -29,7 +29,15 @@ public class Professor {
     public Professor() {
     }
 
-    public Professor(List<Aluno> alunos, String nomeProfessor, Integer numSalaAula, String materia) {
+    public Professor(Integer idProfessor, String nomeProfessor, Integer numSalaAula, String materia) {
+        this.idProfessor = idProfessor;
+        this.nomeProfessor = nomeProfessor;
+        this.numSalaAula = numSalaAula;
+        this.materia = materia;
+    }
+
+    public Professor(Integer idProfessor, List<Aluno> alunos, String nomeProfessor, Integer numSalaAula, String materia) {
+        this.idProfessor = idProfessor;
         this.alunos = alunos;
         this.nomeProfessor = nomeProfessor;
         this.numSalaAula = numSalaAula;

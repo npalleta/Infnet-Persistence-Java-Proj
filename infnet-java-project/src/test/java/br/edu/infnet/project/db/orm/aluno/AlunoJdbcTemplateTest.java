@@ -1,4 +1,4 @@
-package br.edu.infnet.project.db.hibernate.aluno;
+package br.edu.infnet.project.db.orm.aluno;
 
 import br.edu.infnet.project.db.model.domain.Aluno;
 import br.edu.infnet.project.db.repository.AlunoRepository;

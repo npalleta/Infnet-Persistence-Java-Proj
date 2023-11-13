@@ -1,4 +1,4 @@
-package br.edu.infnet.project.db.hibernate.aluno;
+package br.edu.infnet.project.db.orm.aluno;
 
 import java.sql.*;
 
