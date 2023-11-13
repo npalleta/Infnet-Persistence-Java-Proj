@@ -23,7 +23,7 @@ Faça o clone do repositório e:
 
 Abaixo, a imagem contendo o diagrama da base de dados utilizado para implementar nosso ORM.
 
-<IMAGEM>
+![Database-Diagram](infnet-java-project/img/Database-Diagram.png "Database-Diagram")
 
 ## 👨‍💻 Outros:
 
