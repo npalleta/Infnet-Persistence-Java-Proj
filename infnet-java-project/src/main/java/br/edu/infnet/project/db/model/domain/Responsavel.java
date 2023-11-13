@@ -19,7 +19,7 @@ public class Responsavel {
     )
     private Aluno aluno;
 
-    @Column(name = "IdAluno")
+    @Column(name = "IdAluno", nullable = false)
     private Integer idAluno;
 
     @Column(name = "NomeResponsavel", nullable = false)
