@@ -10,7 +10,7 @@ Antes de começar, verifique se você atendeu aos seguintes requisitos:
 * Ter instalado o Docker e Docker Compose;
 * Utilizar um gerenciador de base de dados de sua preferência.
 
-## 🚀 Realizando o Setup
+## 🚀 Realizando o Setup e Executando o Projeto
 
 Faça o clone do repositório e:
 
